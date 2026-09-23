@@ -4,18 +4,27 @@ class Program
 {
     static void Main()
     {
-        string[] temoignages =
-        {
-            "L'image qui bouge rapidement me donne une sensation de malaise et un léger vertige.",
-            "Les mouvements de la caméra me donnent une impression d'instabilité et un peu mal à la tête.",
-            "Je ressens surtout une fatigue visuelle et une légère nausée."
-        };
+        double[] valeurs = { 63, 61, 64, 62, 65, 60 };
 
-        for (int i = 0; i < temoignages.Length; i++)
+        double somme = 0;
+        double min = valeurs[0];
+        double max = valeurs[0];
+
+        foreach (double valeur in valeurs)
         {
-            Console.WriteLine($"Personne {i + 1} :");
-            Console.WriteLine(temoignages[i]);
-            Console.WriteLine();
+            somme += valeur;
+
+            if (valeur < min)
+                min = valeur;
+
+            if (valeur > max)
+                max = valeur;
         }
+
+        double moyenne = somme / valeurs.Length;
+        double ecart = max - min;
+
+        Console.WriteLine($"Moyenne : {moyenne:F1} mm");
+        Console.WriteLine($"Écart min-max : {ecart:F1} mm");
     }
 }
