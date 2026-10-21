@@ -1,0 +1,8 @@
+Mon format pour un mur :
+Je choisirais le format PNG pour une texture de mur, car il conserve les détails de la photographie sans perte liée à la compression. Il convient aux textures qui nécessitent une bonne fidélité visuelle.
+
+Pourquoi :
+Le choix doit aussi tenir compte de la taille réelle des fichiers mesurée dans formats.txt. Si le PNG est beaucoup plus volumineux qu'un format comme QOI ou JPEG, il faut comparer le gain de place avec la qualité conservée. Pour une texture de mur, je privilégie la fidélité des détails, mais un format plus léger peut être préférable si la différence visuelle est négligeable.
+
+Ce qui m'a surpris :
+J'ai constaté que deux formats peuvent conserver les mêmes dimensions en pixels tout en produisant des fichiers de tailles différentes. La compression avec perte, comme celle du JPEG, peut réduire fortement la taille du fichier, mais elle peut aussi supprimer des détails et créer des artefacts visibles. Un fichier plus petit n'est donc pas nécessairement le meilleur choix.
