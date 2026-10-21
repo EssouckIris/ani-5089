@@ -1,0 +1,4 @@
+avant, projet : charge 1, image de 497 x 1080, la texture se charge.
+avant, Build : charge 0, image de 0 x 0, le chemin relatif ne trouve rien. Journal : aucun fichier logs/app.log n'existe, ni sous le dossier du projet ni sous Build/Bin/Debug-Windows/ch5exo6/ ; NkImage::Load echoue sans rien ecrire.
+apres, projet : charge 1, image de 497 x 1080, LocateResource trouve le fichier.
+apres, Build : charge 1, image de 497 x 1080, LocateResource le trouve malgre le dossier de lancement different.
