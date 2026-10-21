@@ -1,0 +1,5 @@
+png : 556122 octets, 497 x 1080
+jpeg : 81020 octets, 497 x 1080
+bmp : 1611414 octets, 497 x 1080
+tga : 1610324 octets, illisible
+qoi : 952792 octets, 497 x 1080
