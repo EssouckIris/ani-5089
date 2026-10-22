@@ -1,0 +1,5 @@
+Ce que la comparaison montre : par rapport au bilineaire, NK_NEAREST differe sur 43621 pixels (sur 65536), alors que NK_BICUBIC et NK_LANCZOS3 en different sur 0. Les trois fichiers bilinear.png, bicubic.png et lanczos3.png sont donc identiques pixel par pixel, et leurs temps sont presque les memes (1796, 1822 et 1784 us). Le moteur semble traiter BICUBIC et LANCZOS3 comme du bilineaire, ce qui contredit ce que leurs noms annoncent.  Dans l'etat actuel du moteur, payer l'un de ces deux filtres ne rapporte rien.
+
+L'ecart de temps que j'accepte : [un nombre, par exemple 2000 us] par reduction, au chargement d'une texture, une seule fois. NK_NEAREST (692 us) est plus rapide d'environ 1100 us, mais sa difference de 43621 pixels est visible sur une texture de mur.
+
+Dans quel contexte : au chargement, une fois pour toutes, nous prenons un filtre de qualite (ici le bilineaire, en attendant que BICUBIC et LANCZOS3 soient reellement differents). Dans la boucle de rendu, nous ne redimensionnons pas du tout.
