@@ -1,0 +1,11 @@
+j'entend comme une sorte de cable brouille ou de la pluie qui tombe dans une chaine radio
+
+Position 1 : camera pres de la fenetre (-1.5, 1.7, -0.9). Source a (-1.98, 1.40, -0.90), minDistance 1 m, maxDistance 12 m. il semble plus fort
+
+Position 2 : camera au centre (0, 1.7, 0). semble diminue.
+
+Position 3 : camera dans le coin oppose (1.5, 1.7, 1.5). plus intensw .
+
+Sans positional : camera au centre. le son semble identique partout
+
+Ce que les mesures montrent : a gauche, G 0.0800 et D 0 ; a droite, G 3.5e-9 et D 0.0802 ; devant, G = D = 0.0567. G^2 + D^2 reste d'environ 0.0064 aux trois positions : le moteur repartit le son entre les oreilles a puissance constante. Sans positional, G = D = 0.157 partout, quelle que soit la position. Ce que j'attendais : comme un signal brouille . Ce qui me surprend : D vaut exactement 0 a gauche, alors qu'une vraie oreille entendrait encore un peu de son de l'autre cote ; le moteur ne modelise ici que l'intensite entre les oreilles. 

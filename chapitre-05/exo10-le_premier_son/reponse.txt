@@ -1,4 +1,4 @@
-Lignes de mon premier son : [N] lignes, de l'initialisation (Initialize) a la liberation de l'echantillon (AudioLoader::Free) comprises.
+
 
 Latence calculee et annoncee : un tampon de 256 trames a 48000 Hz dure 256 / 48000 = 5,33 ms. Le moteur annonce pourtant une latence de 22 ms. Le journal explique l'ecart : le tampon effectif de WASAPI est de 1056 trames, soit 1056 / 48000 = 22 ms. Le systeme a impose un tampon plus grand que celui demande. Une image a 72 images par seconde dure 1000 / 72 = 13,9 ms : la latence annoncee est plus longue qu'une image.
 
