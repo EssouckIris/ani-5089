@@ -1,0 +1,8 @@
+atlas : 512 x 512
+image : 72 x 32
+
+Ma police et sa taille : Inter, 32 pixels, police embarquee dans le moteur (aucun fichier fourni). Le mot Sortie est construit en lisant chaque lettre dans l'atlas par ses coordonnees u0, v0, u1, v1, puis pose sur un fond vert dans une image de 72 x 32.
+
+A trois metres : non realise. Je n'ai pas de salle (pas de chapitre 4), donc pas de capture trois-metres.png.
+
+A cinquante centimetres : non realise, pour la meme raison (pas de capture cinquante-cm.png).
