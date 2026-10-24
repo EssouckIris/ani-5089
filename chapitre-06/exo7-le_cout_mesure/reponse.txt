@@ -1,0 +1,9 @@
+Le rapport : en Release, les matrices prennent 135.5 ms et les quaternions 68.8 ms pour un million d'iterations (moyenne de trois mesures), soit un rapport de 1.97 : les quaternions sont environ deux fois plus rapides. En Debug, le rapport est de 4.67 (738.7 ms contre 158.0 ms). Les deux methodes donnent le meme quaternion (0.23912, 0.36964, -0.09905, 0.89240) et la meme somme (779804.960), donc la comparaison porte sur le meme calcul.
+
+Le cout par image : 135.5 ms pour un million d'iterations = 135.5 ns par iteration pour les matrices, et 68.8 ns pour les quaternions. A 90 images par seconde, le budget est de 11.11 ms par image. Un calcul par image represente 0.0012 % du budget avec les matrices et 0.0006 % avec les quaternions.
+
+Ce que je pense du choix : l'affirmation "quelques dizaines de nanosecondes" est vraie pour les quaternions (68.8 ns, a peu ppres) et fausse pour les matrices (135.5 ns, plus de cent nanosecondes). Ces temps incluent aussi sin/cos, la normalisation et l'addition de la boucle, pas seulement la rotation. Pour une seule rotation par image, le choix du simulateur ne se justifie pas par la vitesse : l'ecart est de moins de 0.002 % du budget. Il se justifie des que le nombre de rotations grandit : avec 100 000 rotations par image, les matrices coutent 13.5 ms (au-dessus du budget de 11.11 ms) et les quaternions 6.9 ms (dans le budget). Le gain d'un facteur deux est donc reel, mais il ne compte que pour un grand nombre de rotations.
+
+Apres optimize("Speed") : [colle ici les trois lignes mesurees apres optimize, ou supprime cette ligne si Release etait deja optimise].
+
+Fichier de projet : j'ai utilise ani5089.jenga pour construire ch6exo7, et MaSalle.jenga contient le bloc du projet avec optimize("Speed") en Release.

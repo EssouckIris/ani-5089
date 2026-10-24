@@ -1,0 +1,7 @@
+with project("ch6exo7"):
+    consoleapp()
+    language("C++")
+    files(["chapitre-06/exo7-le_cout_mesure/cout.cpp"])
+    usecanvas()
+    with filter("config:Release"):
+        optimize("Speed")
