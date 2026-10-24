@@ -1,3 +1,4 @@
+
 Avec CaptureMouse seul : une fenetre s'ouvre. Quand le curseur est a l'interieur de la fenetre, il disparait ; quand je le pousse a l'exterieur, il reapparait. Le pointeur sort donc de la fenetre : CaptureMouse seul ne l'y retient pas.ela rejoint ce que dit le chapitre : une tete peut continuer de tourner, alors que le pointeur s'arrete au bord de l'ecran.
 Pourquoi » de ShowMouse : sous Windows, l’affichage du curseur fonctionne souvent par un compteur. Deux appels à ShowMouse(false) suivis d’un seul ShowMouse(true) pourraient donc laisser le pointeur caché. C’est une hypothèse, à confirmer par ce que tu vois et par le commentaire de NkWindow.h.
 lorsque j'appui sur la croix la fenetre ne se ferme pas sauf quand je fais ctrl + c dans le terminal

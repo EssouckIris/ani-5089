@@ -1,0 +1,7 @@
+Ma sensibilite : 0.002 radians par compte du capteur, gardee pour toute la mesure.
+
+Vitesse de derive : 0 deg/s. Calcul sur deux lignes eloignees de derive.txt : lacet = 0.0 deg a t = 10.0 s et lacet = 0.0 deg a t = 30.0 s, donc (0.0 - 0.0) / (30.0 - 10.0) = 0 deg/s. Je n'ai pas pu reproduire la derive : dans mon environnement, la tete ne tourne pas du tout.
+
+D'ou vient ce chiffre : la colonne brut vaut 0 sur toutes mes lignes (63 images par seconde environ, 1879 images en 30 s). Le programme ajoute au lacet brut x 0.002 a chaque image, et brut vaut toujours 0, donc le lacet reste a 0.0. J'ai teste avec ShowMouse(false) et CaptureMouse(true), sans changement. Je n'ai pas identifie la cause : NkInput n'est peut-etre pas relie au systeme d'evenements dans une fenetre simple, ce que je n'ai pas verifie. Je n'ai pas la salle complete du kit (etapes/etape5_salle.cpp).
+
+Pourquoi elle ne s'arrete pas : je ne l'ai pas observe. D'apres le chapitre, le module garde le dernier delta sans jamais le remettre a zero (constate dans NkEventState : OnRaw ecrase, personne ne consomme), donc l'integrer a chaque image fait deriver la tete meme souris immobile. Ma colonne brut ne le montre pas : elle reste a 0, y compris pendant que je bougeais la souris.
