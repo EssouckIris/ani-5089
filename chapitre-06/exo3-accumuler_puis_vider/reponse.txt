@@ -1,0 +1,7 @@
+Lecture du module : la colonne lu reste a 0.0 pendant toute la mesure, y compris quand je bougeais la souris, alors que les colonnes vide et sans vidage montrent que des mouvements bruts arrivent bien dans la pompe d'evenements. NkInput.MouseRawDeltaX() ne les refletait donc pas dans mon programme. Je n'ai pas identifie la cause.
+
+Accumule et vide : de t = 21 s a t = 31 s, quand j'ai lache la souris, la colonne vide reste figee a 45.6 degres pendant 11 secondes. La tete s'arrete quand la main s'arrete.
+
+Accumule sans vidage : sur la meme periode, la colonne sans vidage grandit de 17296.2 (t = 21 s) a 45892.3 (t = 31 s), soit (45892.3 - 17296.2) / 10 = 2859.6 degres par seconde, alors que je ne touchais plus la souris. L'accumulateur garde le total des mouvements (45.6 degres) et l'ajoute a chaque image : 45.6 x 63 images par seconde = 2873 degres par seconde.
+
+Ce que fait le vidage : il remet l'accumulateur a zero apres chaque lecture, donc chaque mouvement n'est applique qu'une fois. Sans lui, le dernier total est rejoue a chaque image et la tete tourne seule, c'est le defaut du module que l'on contournait. J'ai bouge la souris dans les deux sens au debut : seule la periode d'immobilite (t = 21 s a 31 s) est exploitable.
