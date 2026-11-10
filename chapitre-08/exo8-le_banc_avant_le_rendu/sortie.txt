@@ -1,0 +1,10 @@
+creation d'un anneau de 3 : OK
+tour 1 : emprunte 0, rendu 0 (OK, OK)
+tour 2 : emprunte 1, rendu 1 (OK, OK)
+tour 3 : emprunte 2, rendu 2 (OK, OK)
+tour 4 : emprunte 0, rendu 0 (OK, OK)
+tour 5 : emprunte 1, rendu 1 (OK, OK)
+tour 6 : emprunte 2, rendu 2 (OK, OK)
+emprunter deux fois : REFUSE
+rendre sans avoir emprunte : REFUSE
+creer une chaine de 9 (maximum 8) : REFUSEE
